@@ -61,7 +61,6 @@ void recExtraction(char *FilePath, char *recBegin,long sizeOfFile, char *p2key)
 	fp = fopen(FilePath, "rb");
 	returnOfRead = fread(buffer, 1, sizeOfFile, fp); //讀檔
 	// printf("%s",buffer);
-	// puts("修改前：");
 	// printf("returnOfRead = %zu\n",returnOfRead);
 	// printf("strlen(buffer) = %lu\n",strlen(buffer));
 	if(returnOfRead != strlen(buffer))
@@ -127,7 +126,7 @@ void recExtraction(char *FilePath, char *recBegin,long sizeOfFile, char *p2key)
 	}
 	fclose(fp1);
 	fclose(fp);
-	free(buffer); //沒有要用了, 釋放記憶體
+	free(buffer);
 	free(p2data);
 }
 
